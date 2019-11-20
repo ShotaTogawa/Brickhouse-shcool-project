@@ -66,3 +66,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+## Authors
+
+* **Team Shihomi**
+
+See also the list of [contributors](https://github.com/ShotaTogawa/Brickhouse-shcool-project/graphs/contributors) who participated in this project.
+
