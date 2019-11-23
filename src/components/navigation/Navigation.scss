@@ -1,13 +1,38 @@
 .navigation_container{
     position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 162px;
-    width: 80%;
+    height: 220px;
+    width: 100%;
     z-index:10;
-    border-bottom: 1px solid #FDFDFF;color 
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(2,0,36,0.6) 58%, rgba(0,212,255,0) 100%);
 
-    & > div > a{
-        color: white;
+    .navigation_wrapper{
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 1px solid #FDFDFF;
+
+        .navigation_items {
+            white-space: nowrap;
+
+            & div{
+                display: inline-block;
+                margin: 10px;
+            }
+
+            .navigation_item{
+                color: white;
+            }
+        }
+
+        .navigation_logo_main{
+            .brand_logo{
+                height: 216px;
+            }
+        }
     }
+    
+
+    
 }
