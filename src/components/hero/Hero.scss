@@ -1,7 +1,7 @@
 .hero_container{
     background: url(/Header.JPG) center center / cover no-repeat;
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     text-align: center;
 }
@@ -18,6 +18,7 @@
     bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
+    // white-space: nowrap;
     
     span{
         font-weight: 100;
