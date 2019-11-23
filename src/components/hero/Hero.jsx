@@ -7,7 +7,6 @@ const Hero = () => {
             SEEKING OPPORTUNITIES
           <span className="hero_subheading">IN EARLY STAGE ESPORTS, SPORTS & ENTERTAINMENT TECHNOLOGIES</span>
         </div>
-
     </section>
 };
 
