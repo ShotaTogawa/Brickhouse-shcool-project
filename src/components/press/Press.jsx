@@ -1,9 +1,9 @@
 import React from "react";
-import classes from "./Press.css";
+import "./Press.scss";
 
 const Press = ({ press }) => {
   console.log(press);
-  return <div className="card"></div>;
+  return <div className="card">Card</div>;
 };
 
 export default Press;
