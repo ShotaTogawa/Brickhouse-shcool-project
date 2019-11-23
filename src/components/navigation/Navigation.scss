@@ -4,6 +4,7 @@
     width: 100%;
     z-index:10;
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(2,0,36,0.6) 58%, rgba(0,212,255,0) 100%);
+    transition: "400ms ease";
 
     .navigation_wrapper{
         margin: 0 auto;
@@ -19,10 +20,13 @@
             & div{
                 display: inline-block;
                 margin: 10px;
-            }
 
-            .navigation_item{
-                color: white;
+                & a{
+                    color: white;
+                    font-style: normal;
+                    font-weight: 900;
+                    text-decoration: none;
+                }
             }
         }
 
@@ -32,7 +36,27 @@
             }
         }
     }
-    
+}
 
-    
+.navigation_on_scroll_wrapper{
+    background-color: #028DC3;
+    transition: all 0.5s ease;
+    height: 100px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navigation_items {
+        white-space: nowrap;
+
+        & div{
+            display: inline-block;
+            margin: 10px;
+        }
+    }
 }

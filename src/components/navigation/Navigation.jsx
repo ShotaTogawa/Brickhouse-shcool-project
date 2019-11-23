@@ -1,10 +1,31 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import logo from "../../img/brickhouse.png";
+import React, { useState }  from "react";
+import useWindowScrollPosition from "@rehooks/window-scroll-position";
 
+import logo from "../../img/brickhouse.png";
 import "./Navigation.scss";
 
 const Navigation = () => {
+    const [scrolling, setScrolling] = useState(false);
+    const changePosition = 1;
+  
+    let position = useWindowScrollPosition();
+  
+    if (position.y > changePosition && !scrolling) {
+        setScrolling(true);
+    }
+  
+    if (position.y <= changePosition && scrolling) {
+        setScrolling(false);
+    }
+
+    const NavigationLinkOnScroll = () =>{
+        return (
+            <div className="navigation_on_scroll_wrapper">
+                <h1>Logo</h1>
+                <div className="navigation_items"><NavigationLink btnObj={navButtons} /></div>
+            </div>
+        );
+      }
 
     const NavigationLink = ({ btnObj }) => {
         return btnObj.map((item) => (
@@ -21,27 +42,31 @@ const Navigation = () => {
             id: 1,
             title: "ABOUT",
             isActive: false,
-            url: "#about_container"
+            url: "#about"
         },
         {
             id: 2,
             title: "TEAM",
             isActive: false,
-            url: "#team_container"
+            url: "#team"
         },
         {
             id: 3,
-            title: "Press",
+            title: "PRESS",
             isActive: false,
-            url: "#press_container"
+            url: "#press"
         },
         {
             id: 4,
-            title: "Contact",
+            title: "CONTACT",
             isActive: false,
-            url: "#contact_container"
+            url: "#contact"
         }
     ];
+
+    if(scrolling){
+        return <NavigationLinkOnScroll />
+    }
 
     return (
         <section className="navigation_container">
