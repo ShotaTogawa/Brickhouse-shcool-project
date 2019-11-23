@@ -1,10 +1,9 @@
 .navigation_container{
-    position: fixed;
+    position: absolute;
     height: 220px;
     width: 100%;
     z-index:10;
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(2,0,36,0.6) 58%, rgba(0,212,255,0) 100%);
-    transition: "400ms ease";
 
     .navigation_wrapper{
         margin: 0 auto;
@@ -39,8 +38,9 @@
 }
 
 .navigation_on_scroll_wrapper{
-    background-color: #028DC3;
+    background-color: rgb(21, 72, 92);
     transition: all 0.5s ease;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
     height: 100px;
     position: fixed;
     right: 0;
@@ -53,10 +53,22 @@
 
     .navigation_items {
         white-space: nowrap;
+        margin-right: 20px;
 
         & div{
             display: inline-block;
             margin: 10px;
+
+            & a{
+                color: white;
+                font-style: normal;
+                font-weight: 900;
+                text-decoration: none;
+            }
         }
+    }
+
+    .brand_logo{
+        height: 80px;
     }
 }
