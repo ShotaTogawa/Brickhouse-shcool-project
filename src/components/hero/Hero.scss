@@ -1,25 +1,27 @@
 .hero_container{
     background: url(/Header.JPG) center center / cover no-repeat;
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     text-align: center;
 }
 
-.hero_title{
+.hero_heading{
     width: 80%;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 6.5em;
     color: white;
     text-shadow: 6px 2px 9px #302525;
-    line-height: .5em;
+    line-height: 1em;
     position: absolute;
     bottom: 30%;
     left: 50%;
     transform: translateX(-50%);
+    // white-space: nowrap;
     
-    span{
+    .hero_subheading{
+        display: block;
         font-weight: 100;
         font-size: .38em;
     }
