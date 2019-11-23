@@ -1,0 +1,27 @@
+.press_container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(34, 36, 45, 1), rgba(34, 36, 45, 1));
+  background-size: cover;
+}
+.press_heading {
+  color: #fff;
+  font-size: 70px;
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 3px;
+  border-bottom: 5px solid #fff;
+}
+
+.press_card_list {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  position: relative;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+}
