@@ -1,0 +1,13 @@
+.navigation_container{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 162px;
+    width: 80%;
+    z-index:10;
+    border-bottom: 1px solid #FDFDFF;color 
+
+    & > div > a{
+        color: white;
+    }
+}
