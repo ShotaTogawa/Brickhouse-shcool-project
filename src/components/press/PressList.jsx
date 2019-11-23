@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Press from "./Press";
-import classes from "./Press.css";
 
 class PressList extends Component {
   state = {
