@@ -1,0 +1,74 @@
+.navigation_container{
+    position: absolute;
+    height: 220px;
+    width: 100%;
+    z-index:10;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(2,0,36,0.6) 58%, rgba(0,212,255,0) 100%);
+
+    .navigation_wrapper{
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-bottom: 1px solid #FDFDFF;
+
+        .navigation_items {
+            white-space: nowrap;
+
+            & div{
+                display: inline-block;
+                margin: 10px;
+
+                & a{
+                    color: white;
+                    font-style: normal;
+                    font-weight: 900;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .navigation_logo_main{
+            .brand_logo{
+                height: 216px;
+            }
+        }
+    }
+}
+
+.navigation_on_scroll_wrapper{
+    background-color: rgb(21, 72, 92);
+    transition: all 0.5s ease;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
+    height: 100px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navigation_items {
+        white-space: nowrap;
+        margin-right: 20px;
+
+        & div{
+            display: inline-block;
+            margin: 10px;
+
+            & a{
+                color: white;
+                font-style: normal;
+                font-weight: 900;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .brand_logo{
+        height: 80px;
+    }
+}
