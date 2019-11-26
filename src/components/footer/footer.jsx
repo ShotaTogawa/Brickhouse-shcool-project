@@ -6,7 +6,7 @@ import IMG3 from "../../img/twitter-sign.png";
 import IMG4 from "../../img/youtube.png";
 import LOGO from "../../img/brickhouse_2.png";
 
-import './footer.scss';
+import './Footer.scss';
 
 const Footer = () => {
   return (
