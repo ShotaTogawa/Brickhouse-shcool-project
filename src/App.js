@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Index from "./components/Index";
-import PressList from "./components/press/PressList";
 import Navigation from "./components/navigation/Navigation";
 
 

@@ -24,6 +24,28 @@
                     font-style: normal;
                     font-weight: 900;
                     text-decoration: none;
+                    position: relative;
+
+                &.active{
+                    border-bottom: 2px solid white;
+                }
+
+                &:after {
+                    position: absolute;
+                    transition: all .5s;
+                    bottom: -2px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 0%;
+                    content: '.';
+                    color: transparent;
+                    background: #fff;
+                    height: 2px;
+                }
+                &:hover:after {
+                    width: 100%;
+                }
                 }
             }
         }
@@ -63,12 +85,35 @@
         & div{
             display: inline-block;
             margin: 10px;
+            
 
             & a{
                 color: white;
                 font-style: normal;
                 font-weight: 900;
                 text-decoration: none;
+                position: relative;
+
+                &.active{
+                    border-bottom: 2px solid white;
+                }
+
+                &:after {
+                    position: absolute;
+                    transition: all .5s;
+                    bottom: -2px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 0%;
+                    content: '.';
+                    color: transparent;
+                    background: #fff;
+                    height: 2px;
+                }
+                &:hover:after {
+                    width: 100%;
+                }
             }
         }
     }
