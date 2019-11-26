@@ -2,14 +2,14 @@ import React from "react";
 import Hero from "./hero/Hero";
 import PressList from "./press/PressList";
 import About from "./about/About";
-import Partners from "./partners/Partners";
+import Advisors from "./advisors/Advisors";
 
 function IndexPage() {
     return (
         <>
             <Hero />
             <About />
-            <Partners />
+            <Advisors />
             <PressList />
         </>
   );
