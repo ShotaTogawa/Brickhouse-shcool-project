@@ -7,7 +7,7 @@ const Card = () => {
             <div className="partners_cards_card_container">
                 <div className="partners_cards_card_left_container">
                     <div>
-                        
+
                     </div>
                 </div>
                 <div className="partners_cards_card_right_container">
