@@ -1,4 +1,4 @@
-import React, { useState }  from "react";
+import React, { useState } from "react";
 import useWindowScrollPosition from "@rehooks/window-scroll-position";
 
 import logo from "../../img/brickhouse.png";
@@ -7,40 +7,7 @@ import "./Navigation.scss";
 
 const Navigation = () => {
     const [scrolling, setScrolling] = useState(false);
-    const changePosition = 220;
-  
-    let position = useWindowScrollPosition();
-  
-    if (position.y > changePosition && !scrolling) {
-        setScrolling(true);
-    }
-  
-    if (position.y <= changePosition && scrolling) {
-        setScrolling(false);
-    }
-
-    const NavigationLinkOnScroll = () =>{
-        return (
-            <div className="navigation_on_scroll_wrapper" style={{opacity: scrolling ? "1" : "0"}}>
-                <a href="#hero"><img className="brand_logo" src={logo_sm} alt="Brickhouse_Logo" /></a>
-                <div className="navigation_items">
-                    <NavigationLink btnObj={navButtons} />
-                </div>
-            </div>
-        );
-      }
-
-    const NavigationLink = ({ btnObj }) => {
-        return btnObj.map((item) => (
-            <div className="navigation_item" key={item.id}>
-                <a href={item.url} className="btn">
-                    {item.title}
-                </a>
-            </div>
-        ));
-    };
-
-    const navButtons = [
+    const [navButtons, setNavButtons] = useState([
         {
             id: 1,
             title: "ABOUT",
@@ -65,27 +32,81 @@ const Navigation = () => {
             isActive: false,
             url: "#contact"
         }
-    ];
+    ]);
+
+
+    const changePosition = 220;
+
+    let position = useWindowScrollPosition();
+
+    if (position.y > changePosition && !scrolling) {
+        setScrolling(true);
+    }
+
+    if (position.y <= changePosition && scrolling) {
+        setScrolling(false);
+
+        //reset active state of buttons when on top
+        const newNavButtons = navButtons.map(button => {
+            button.isActive = false
+            return button;
+        });
+
+        setNavButtons(newNavButtons)
+    }
+
+    const NavigationLinkOnScroll = () => {
+        return (
+            <>
+                <a href="#hero"><img className="brand_logo" src={logo_sm} alt="Brickhouse_Logo" /></a>
+                <div className="navigation_items">
+                    <NavigationLink btnObj={navButtons} />
+                </div>
+            </>
+        );
+    }
+
+    const NavigationLink = ({ btnObj }) => {
+        return btnObj.map((item) => (
+            <div className="navigation_item" key={item.id}>
+                <a href={item.url} onClick={() => clickHandler(item.id)} className={"btn" + (item.isActive ? " active" : "")}>
+                    {item.title}
+                </a>
+            </div>
+        ));
+    };
+
+    const clickHandler = (id) =>{
+        const newNavButtons = navButtons.map(button => {
+            button.id === id
+              ? (button.isActive = true)
+              : (button.isActive = false);
+            return button;
+          });
+
+          setNavButtons(newNavButtons)
+    }
 
     return (
-
         <>
-        <NavigationLinkOnScroll />
-        <section className="navigation_container">
-            <div className="navigation_wrapper">
-                <div className="navigation_items">
-                    <NavigationLink btnObj={[navButtons[0], navButtons[1]]} />
-                </div>
-                <div className="navigation_logo_main">
-                    <a href="/">
-                        <img className="brand_logo" src={logo} alt="Brickhouse_Logo" />
-                    </a>
-                </div>
-                <div className="navigation_items">
-                    <NavigationLink btnObj={[navButtons[2], navButtons[3]]} />
-                </div>
+            <div className={"navigation_on_scroll_wrapper" + (!scrolling ? " hidden" : "")}>
+                <NavigationLinkOnScroll />
             </div>
-        </section>
+            <section className="navigation_container">
+                <div className="navigation_wrapper">
+                    <div className="navigation_items">
+                        <NavigationLink btnObj={[navButtons[0], navButtons[1]]} />
+                    </div>
+                    <div className="navigation_logo_main">
+                        <a href="/">
+                            <img className="brand_logo" src={logo} alt="Brickhouse_Logo" />
+                        </a>
+                    </div>
+                    <div className="navigation_items">
+                        <NavigationLink btnObj={[navButtons[2], navButtons[3]]} />
+                    </div>
+                </div>
+            </section>
         </>
     );
 };
