@@ -5,6 +5,7 @@ import About from "./about/About";
 import Advisors from "./advisors/Advisors";
 import Footer from "./footer/Footer";
 
+
 function IndexPage() {
     return (
         <>
