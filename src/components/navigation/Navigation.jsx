@@ -21,12 +21,12 @@ const Navigation = () => {
 
     const NavigationLinkOnScroll = () =>{
         return (
-            <div className="navigation_on_scroll_wrapper" style={{opacity: scrolling ? "1" : "0"}}>
-                <a href="#hero"><img className="brand_logo" src={logo_sm} alt="Brickhouse_Logo" /></a>
-                <div className="navigation_items">
-                    <NavigationLink btnObj={navButtons} />
-                </div>
+            <>
+            <a href="#hero"><img className="brand_logo" src={logo_sm} alt="Brickhouse_Logo" /></a>
+            <div className="navigation_items">
+                <NavigationLink btnObj={navButtons} />
             </div>
+            </>
         );
       }
 
@@ -68,9 +68,10 @@ const Navigation = () => {
     ];
 
     return (
-
         <>
-        <NavigationLinkOnScroll />
+        <div className={"navigation_on_scroll_wrapper" + (!scrolling ? " hidden": "")}>
+            <NavigationLinkOnScroll />
+        </div>
         <section className="navigation_container">
             <div className="navigation_wrapper">
                 <div className="navigation_items">
