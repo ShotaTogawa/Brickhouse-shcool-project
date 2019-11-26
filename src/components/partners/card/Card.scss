@@ -1,0 +1,22 @@
+.partners_cards_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: rgb(231, 35, 9) solid 1px;
+    .partners_cards_card_container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        border: yellowgreen solid 1px;
+       .partners_cards_card_left_container {
+            width: 50%;
+            min-height: 500px;
+            border: blue solid 1px;
+       }
+       .partners_cards_card_right_container {
+            width: 50%;
+            min-height: 500px;
+            border: rgb(255, 115, 0) solid 1px;
+       }
+    }
+}
