@@ -1,22 +1,92 @@
+$prim-blue: #56CCF2;
+
+
 .partners_cards_container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    border: rgb(231, 35, 9) solid 1px;
+    // border: rgb(231, 35, 9) solid 1px;
     .partners_cards_card_container {
         width: 100%;
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        border: yellowgreen solid 1px;
+        margin-top: 100px;
+        // border: yellowgreen solid 1px;
+        &.even {
+            flex-flow: row-reverse;
+        }
        .partners_cards_card_left_container {
-            width: 50%;
+            width: 40%;
             min-height: 500px;
-            border: blue solid 1px;
+            // border: blue solid 5px;
+            margin-right: 5%;
+            padding-bottom: 50px;
+            &.even {
+                margin-left: 5%;
+                margin-right: 0%;
+            }
+            .partners_cards_card_picture {
+                background-image: url(../../../img/Partner_1.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                width: 100%;
+                height: 100%;
+            }
        }
+
        .partners_cards_card_right_container {
-            width: 50%;
+            flex-basis: 390px;
+            flex-grow: 1;
             min-height: 500px;
-            border: rgb(255, 115, 0) solid 1px;
+            display: flex;
+            flex-flow: column;
+            // border: rgb(255, 115, 0) solid 1px;
+            .partners_cards_card_firstRow_container {
+                display: flex;
+                align-items: center;
+                .partners_cards_card_name {
+                    color: white;
+                    font-size: 2.2rem;
+                }
+                .partners_cards_card_decorationWhite {
+                    width: 4px;
+                    height: 35px;
+                    background-color: white;
+                    margin: 0px 20px;
+                }
+                .partners_cards_card_city {
+                    color: $prim-blue;
+                    font-size: 1rem;
+                    font-weight: 300;
+                    transform: translateY(0.5rem);
+                }
+            }
+            .partners_cards_card_secondRow_container {
+                display: flex;
+                align-items: center;
+                .partners_cards_card_number {
+                    color: $prim-blue;
+                    font-size: 1rem;
+                }
+                .partners_cards_card_decorationBlue {
+                    width: 3px;
+                    height: 20px;
+                    margin: 0px 20px;
+                    background-color: $prim-blue;
+                }
+                .partners_cards_card_email {
+                    color: $prim-blue;
+                    font-size: 1rem;
+                }
+            }
+            .partners_cards_card_content {
+                color: white;
+                text-align: left;
+                margin-top: 1.5rem;
+                line-height: 1.8rem;
+            }
        }
     }
 }
