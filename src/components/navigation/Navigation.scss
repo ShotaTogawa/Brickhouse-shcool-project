@@ -1,8 +1,11 @@
 .navigation_container{
     position: absolute;
-    height: 220px;
+    height: 130px;
     width: 100%;
     z-index:10;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 
     .navigation_wrapper{
         margin: 0 auto;
@@ -26,37 +29,39 @@
                     text-decoration: none;
                     position: relative;
 
-                &.active{
-                    border-bottom: 2px solid white;
-                }
+                    &.active{
+                        border-bottom: 2px solid white;
+                    }
 
-                &:after {
-                    position: absolute;
-                    transition: all .5s;
-                    bottom: -2px;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
-                    width: 0%;
-                    content: '.';
-                    color: transparent;
-                    background: #fff;
-                    height: 2px;
-                }
-                &:hover:after {
-                    width: 100%;
-                }
+                    &:after {
+                        position: absolute;
+                        transition: all .5s;
+                        bottom: -2px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 0%;
+                        content: '.';
+                        color: transparent;
+                        background: #fff;
+                        height: 2px;
+                    }
+                    &:hover:after {
+                        width: 100%;
+                    }
                 }
             }
         }
 
         .navigation_logo_main{
             .brand_logo{
-                height: 185px;
+                transition: all .5s;
+                height: 105px;
                 margin-bottom: -15px;
 
-                @media only screen and (max-width: 768px) {
-                    height: 95px;
+                @media only screen and (max-width: 1024px) {
+                    height: 65px;
+                    margin-bottom: -5px;
                 }
             }
         }
@@ -125,5 +130,22 @@
 
     .brand_logo{
         height: 80px;
+    }
+}
+
+.navigation_container_mobile{
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    z-index:10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+
+
+    .brand_logo{
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
     }
 }

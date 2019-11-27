@@ -4,6 +4,7 @@ import Media from "react-media";
 
 import Index from "./components/Index";
 import Navigation from "./components/navigation/Navigation";
+import NavigationMobile from "./components/navigation/NavigationMobile";
 
 
 const App = () => {
@@ -12,17 +13,16 @@ const App = () => {
       <BrowserRouter>
         <Media
           queries={{
-            small: "(max-width: 374px)",
-            notSmall: "(min-width: 751px)"
+            mobile: "(max-width: 750px)",
+            webbrowser: "(min-width: 751px)"
           }}
         >
           {matches => (
             <>
-              {/* leave this here temporarily */}
-              {/* {matches.small && (
-                    
-                  )} */}
-              {matches.notSmall && (
+              {matches.mobile && (
+                <NavigationMobile />
+              )}
+              {matches.webbrowser && (
                 <Navigation />
               )}
             </>

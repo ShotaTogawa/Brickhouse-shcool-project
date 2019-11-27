@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import useWindowScrollPosition from "@rehooks/window-scroll-position";
 
-import logo from "../../img/brickhouse.png";
+import logo from "../../img/brickhouse_hori.png";
 import logo_sm from "../../img/brickhouse_2.png";
 import "./Navigation.scss";
 
@@ -40,8 +40,8 @@ const Navigation = () => {
         }
     ]);
 
-
-    const changePosition = 220;
+    //Y-coordinate when the sticky bar should appear
+    const changePosition = 130;
 
     let position = useWindowScrollPosition();
 
