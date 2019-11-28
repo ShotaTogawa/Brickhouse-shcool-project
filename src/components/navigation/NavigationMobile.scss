@@ -93,7 +93,7 @@ nav {
   &:before {
     content: '';
     @include position_center;
-    background: rgba($color-dark, 0.98);
+    background: rgba($color_dark, 0.98);
     width: 100vw;
     height: 0;
     padding-bottom: 100%;
