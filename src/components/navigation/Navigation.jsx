@@ -16,18 +16,24 @@ const Navigation = () => {
         },
         {
             id: 2,
-            title: "TEAM",
+            title: "PARTNERS",
             isActive: false,
-            url: "#team"
+            url: "#partners"
         },
         {
             id: 3,
+            title: "ADVISORS",
+            isActive: false,
+            url: "#advisors"
+        },
+        {
+            id: 4,
             title: "PRESS",
             isActive: false,
             url: "#press"
         },
         {
-            id: 4,
+            id: 5,
             title: "CONTACT",
             isActive: false,
             url: "#contact"
@@ -94,16 +100,13 @@ const Navigation = () => {
             </div>
             <section className="navigation_container">
                 <div className="navigation_wrapper">
-                    <div className="navigation_items">
-                        <NavigationLink btnObj={[navButtons[0], navButtons[1]]} />
-                    </div>
                     <div className="navigation_logo_main">
                         <a href="/">
                             <img className="brand_logo" src={logo} alt="Brickhouse_Logo" />
                         </a>
                     </div>
                     <div className="navigation_items">
-                        <NavigationLink btnObj={[navButtons[2], navButtons[3]]} />
+                        <NavigationLink btnObj={navButtons} />
                     </div>
                 </div>
             </section>
