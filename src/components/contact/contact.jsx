@@ -4,7 +4,7 @@ import Title from "./Title.jsx";
 import Contact_logo from "../../img/blue-logo.png";
 import ContactDetails from "./ContactDetails.jsx";
 
-import './Contact.scss';
+import './contact.scss';
 
 const Contact = () => {
   return (
