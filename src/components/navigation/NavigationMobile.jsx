@@ -57,7 +57,7 @@ const NavigationMobile = () => {
 
     return (
         <>
-            <button onClick={clickHandler} class="menu-toggle"></button>
+            <button onClick={clickHandler} class="menu_toggle"></button>
             <nav>
                 <ul class="menu">
                     {navButtons.map((item) => (
