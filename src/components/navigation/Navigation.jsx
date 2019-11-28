@@ -1,41 +1,18 @@
 import React, { useState } from "react";
 import useWindowScrollPosition from "@rehooks/window-scroll-position";
 
-import logo from "../../img/brickhouse.png";
+import logo from "../../img/brickhouse_hori.png";
 import logo_sm from "../../img/brickhouse_2.png";
+import navItems from "./NavItems";
+import NavigationLinks from "./NavigationLinks";
 import "./Navigation.scss";
 
 const Navigation = () => {
     const [scrolling, setScrolling] = useState(false);
-    const [navButtons, setNavButtons] = useState([
-        {
-            id: 1,
-            title: "ABOUT",
-            isActive: false,
-            url: "#about"
-        },
-        {
-            id: 2,
-            title: "TEAM",
-            isActive: false,
-            url: "#team"
-        },
-        {
-            id: 3,
-            title: "PRESS",
-            isActive: false,
-            url: "#press"
-        },
-        {
-            id: 4,
-            title: "CONTACT",
-            isActive: false,
-            url: "#contact"
-        }
-    ]);
+    const [navButtons, setNavButtons] = useState(navItems);
 
-
-    const changePosition = 220;
+    //Y-coordinate when the sticky bar should appear
+    const changePosition = 130;
 
     let position = useWindowScrollPosition();
 
@@ -60,31 +37,21 @@ const Navigation = () => {
             <>
                 <a href="#hero"><img className="brand_logo" src={logo_sm} alt="Brickhouse_Logo" /></a>
                 <div className="navigation_items">
-                    <NavigationLink btnObj={navButtons} />
+                    <NavigationLinks btnObj={navButtons} buttonHandler={clickHandler} />
                 </div>
             </>
         );
     }
 
-    const NavigationLink = ({ btnObj }) => {
-        return btnObj.map((item) => (
-            <div className="navigation_item" key={item.id}>
-                <a href={item.url} onClick={() => clickHandler(item.id)} className={"btn" + (item.isActive ? " active" : "")}>
-                    {item.title}
-                </a>
-            </div>
-        ));
-    };
-
-    const clickHandler = (id) =>{
+    const clickHandler = (id) => {
         const newNavButtons = navButtons.map(button => {
             button.id === id
-              ? (button.isActive = true)
-              : (button.isActive = false);
+                ? (button.isActive = true)
+                : (button.isActive = false);
             return button;
-          });
+        });
 
-          setNavButtons(newNavButtons)
+        setNavButtons(newNavButtons)
     }
 
     return (
@@ -94,16 +61,13 @@ const Navigation = () => {
             </div>
             <section className="navigation_container">
                 <div className="navigation_wrapper">
-                    <div className="navigation_items">
-                        <NavigationLink btnObj={[navButtons[0], navButtons[1]]} />
-                    </div>
                     <div className="navigation_logo_main">
                         <a href="/">
                             <img className="brand_logo" src={logo} alt="Brickhouse_Logo" />
                         </a>
                     </div>
                     <div className="navigation_items">
-                        <NavigationLink btnObj={[navButtons[2], navButtons[3]]} />
+                        <NavigationLinks btnObj={navButtons} buttonHandler={clickHandler} />
                     </div>
                 </div>
             </section>

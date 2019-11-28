@@ -1,12 +1,17 @@
+@import "../../css/variables.scss";
+
 .navigation_container{
     position: absolute;
-    height: 220px;
+    height: 130px;
     width: 100%;
     z-index:10;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 
     .navigation_wrapper{
         margin: 0 auto;
-        width: 80%;
+        width: 90%;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -20,39 +25,46 @@
                 margin: 10px;
 
                 & a{
-                    color: white;
+                    color: $color_white;
                     font-style: normal;
                     font-weight: 900;
                     text-decoration: none;
                     position: relative;
 
-                &.active{
-                    border-bottom: 2px solid white;
-                }
+                    &.active{
+                        border-bottom: 2px solid $color_white;
+                    }
 
-                &:after {
-                    position: absolute;
-                    transition: all .5s;
-                    bottom: -2px;
-                    left: 0;
-                    right: 0;
-                    margin: auto;
-                    width: 0%;
-                    content: '.';
-                    color: transparent;
-                    background: #fff;
-                    height: 2px;
-                }
-                &:hover:after {
-                    width: 100%;
-                }
+                    &:after {
+                        position: absolute;
+                        transition: all .5s;
+                        bottom: -2px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 0%;
+                        content: '.';
+                        color: transparent;
+                        background: $color_white;
+                        height: 2px;
+                    }
+                    &:hover:after {
+                        width: 100%;
+                    }
                 }
             }
         }
 
         .navigation_logo_main{
             .brand_logo{
-                height: 216px;
+                transition: all .5s;
+                height: 105px;
+                margin-bottom: -15px;
+
+                @media only screen and (max-width: 1024px) {
+                    height: 65px;
+                    margin-bottom: -5px;
+                }
             }
         }
     }
@@ -65,6 +77,7 @@
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.4);
     
     height: 100px;
+    width: 100vw;
     position: fixed;
     right: 0;
     left: 0;
@@ -88,14 +101,14 @@
             
 
             & a{
-                color: white;
+                color: $color_white;
                 font-style: normal;
                 font-weight: 900;
                 text-decoration: none;
                 position: relative;
 
                 &.active{
-                    border-bottom: 2px solid white;
+                    border-bottom: 2px solid $color_white;
                 }
 
                 &:after {
@@ -108,7 +121,7 @@
                     width: 0%;
                     content: '.';
                     color: transparent;
-                    background: #fff;
+                    background: $color_white;
                     height: 2px;
                 }
                 &:hover:after {
@@ -120,5 +133,22 @@
 
     .brand_logo{
         height: 80px;
+    }
+}
+
+.navigation_container_mobile{
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    z-index:10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+
+
+    .brand_logo{
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
     }
 }

@@ -19,7 +19,21 @@
     bottom: 100px;
     left: 50%;
     transform: translateX(-50%);
-    // white-space: nowrap;
+    transition: all .5s;
+    
+    @media only screen and (max-width: 1440px) {
+        font-size: 4.5em;
+    }
+
+    @media only screen and (max-width: 768px) {
+        font-size: 2.5em;
+    }
+
+    @media only screen and (max-width: 425px) {
+        font-size: 1.5em;
+    }
+
+
     
     .hero_subheading{
         display: block;
@@ -28,3 +42,7 @@
         line-height:120%;
     }
 }
+
+
+
+//845 min-height
