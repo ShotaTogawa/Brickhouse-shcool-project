@@ -77,6 +77,29 @@ A common way to update is by doing
 
 - [node-sass](https://github.com/sass/node-sass) is a library that provides binding for Node.js to LibSass, the C version of the popular stylesheet preprocessor, Sass.
 
+### Dependencies
+
+- [rehooks / window-scroll-position @rehooks/window-scroll-position](https://github.com/rehooks/window-scroll-position)
+^ 1.0.1
+
+- [sass / node-sass](https://github.com/sass/node-sass)
+^ 4.13.0
+
+- [facebook / react](https://github.com/facebook/react)
+^ 16.12.0
+
+- [facebook / react react-dom](https://github.com/facebook/react)
+^ 16.12.0
+
+- [ReactTraining / react-media](https://github.com/ReactTraining/react-media)
+^ 1.10.0
+
+- [ReactTraining / react-router react-router-dom](ReactTraining / react-router )
+^ 5.1.2
+
+- [facebook / create-react-app react-scripts](https://github.com/facebook/create-react-app)
+
+
 ---
 
 ## Authors
