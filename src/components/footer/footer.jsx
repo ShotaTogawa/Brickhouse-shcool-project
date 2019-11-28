@@ -4,16 +4,15 @@ import IMG1 from "../../img/facebook.png";
 import IMG2 from "../../img/instagram.png";
 import IMG3 from "../../img/twitter-sign.png";
 import IMG4 from "../../img/youtube.png";
-import LOGO from "../../img/brickhouse.png";
+import LOGO from "../../img/brickhouse_2.png";
 
 import './footer.scss';
 
 const Footer = () => {
   return (
     <section className="footer_container">
-      <div>
-        <img className="logo"　src={LOGO} />
-      </div>
+      <img className="logo" src={LOGO} />
+
       <hr />
       <div className="icons">
         <Icons img={IMG1} />
