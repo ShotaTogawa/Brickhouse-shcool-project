@@ -3,6 +3,7 @@ import useWindowScrollPosition from "@rehooks/window-scroll-position";
 
 import logo from "../../img/brickhouse_hori.png";
 import logo_sm from "../../img/brickhouse_2.png";
+import NavigationLinks from "./NavigationLinks";
 import "./Navigation.scss";
 
 const Navigation = () => {
@@ -66,31 +67,21 @@ const Navigation = () => {
             <>
                 <a href="#hero"><img className="brand_logo" src={logo_sm} alt="Brickhouse_Logo" /></a>
                 <div className="navigation_items">
-                    <NavigationLink btnObj={navButtons} />
+                    <NavigationLinks btnObj={navButtons} buttonHandler={clickHandler} />
                 </div>
             </>
         );
     }
 
-    const NavigationLink = ({ btnObj }) => {
-        return btnObj.map((item) => (
-            <div className="navigation_item" key={item.id}>
-                <a href={item.url} onClick={() => clickHandler(item.id)} className={"btn" + (item.isActive ? " active" : "")}>
-                    {item.title}
-                </a>
-            </div>
-        ));
-    };
-
-    const clickHandler = (id) =>{
+    const clickHandler = (id) => {
         const newNavButtons = navButtons.map(button => {
             button.id === id
-              ? (button.isActive = true)
-              : (button.isActive = false);
+                ? (button.isActive = true)
+                : (button.isActive = false);
             return button;
-          });
+        });
 
-          setNavButtons(newNavButtons)
+        setNavButtons(newNavButtons)
     }
 
     return (
@@ -106,7 +97,7 @@ const Navigation = () => {
                         </a>
                     </div>
                     <div className="navigation_items">
-                        <NavigationLink btnObj={navButtons} />
+                        <NavigationLinks btnObj={navButtons} buttonHandler={clickHandler} />
                     </div>
                 </div>
             </section>
