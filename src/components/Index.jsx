@@ -3,7 +3,8 @@ import Hero from "./hero/Hero";
 import PressList from "./press/PressList";
 import About from "./about/About";
 import Advisors from "./advisors/Advisors";
-import Footer from "./footer/Footer";
+import Contact from "./contact/Contact";
+import Footer from "./footer/footer";
 
 
 function IndexPage() {
@@ -13,6 +14,7 @@ function IndexPage() {
             <About />
             <Advisors />
             <PressList />
+            <Contact />
             <Footer />
         </>
   );
