@@ -1,47 +1,18 @@
 import React, { useState } from "react";
 import useWindowScrollPosition from "@rehooks/window-scroll-position";
 
-import logo from "../../img/brickhouse.png";
+import logo from "../../img/brickhouse_hori.png";
 import logo_sm from "../../img/brickhouse_2.png";
+import navItems from "./NavItems";
+import NavigationLinks from "./NavigationLinks";
 import "./Navigation.scss";
 
 const Navigation = () => {
     const [scrolling, setScrolling] = useState(false);
-    const [navButtons, setNavButtons] = useState([
-        {
-            id: 1,
-            title: "ABOUT",
-            isActive: false,
-            url: "#about"
-        },
-        {
-            id: 2,
-            title: "PARTNERS",
-            isActive: false,
-            url: "#partners"
-        },
-        {
-            id: 3,
-            title: "ADVISORS",
-            isActive: false,
-            url: "#advisors"
-        },
-        {
-            id: 4,
-            title: "PRESS",
-            isActive: false,
-            url: "#press"
-        },
-        {
-            id: 5,
-            title: "CONTACT",
-            isActive: false,
-            url: "#contact"
-        }
-    ]);
+    const [navButtons, setNavButtons] = useState(navItems);
 
-
-    const changePosition = 220;
+    //Y-coordinate when the sticky bar should appear
+    const changePosition = 130;
 
     let position = useWindowScrollPosition();
 
@@ -66,31 +37,21 @@ const Navigation = () => {
             <>
                 <a href="#hero"><img className="brand_logo" src={logo_sm} alt="Brickhouse_Logo" /></a>
                 <div className="navigation_items">
-                    <NavigationLink btnObj={navButtons} />
+                    <NavigationLinks btnObj={navButtons} buttonHandler={clickHandler} />
                 </div>
             </>
         );
     }
 
-    const NavigationLink = ({ btnObj }) => {
-        return btnObj.map((item) => (
-            <div className="navigation_item" key={item.id}>
-                <a href={item.url} onClick={() => clickHandler(item.id)} className={"btn" + (item.isActive ? " active" : "")}>
-                    {item.title}
-                </a>
-            </div>
-        ));
-    };
-
-    const clickHandler = (id) =>{
+    const clickHandler = (id) => {
         const newNavButtons = navButtons.map(button => {
             button.id === id
-              ? (button.isActive = true)
-              : (button.isActive = false);
+                ? (button.isActive = true)
+                : (button.isActive = false);
             return button;
-          });
+        });
 
-          setNavButtons(newNavButtons)
+        setNavButtons(newNavButtons)
     }
 
     return (
@@ -106,7 +67,7 @@ const Navigation = () => {
                         </a>
                     </div>
                     <div className="navigation_items">
-                        <NavigationLink btnObj={navButtons} />
+                        <NavigationLinks btnObj={navButtons} buttonHandler={clickHandler} />
                     </div>
                 </div>
             </section>
