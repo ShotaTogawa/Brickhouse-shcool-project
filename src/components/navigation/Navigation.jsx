@@ -3,43 +3,13 @@ import useWindowScrollPosition from "@rehooks/window-scroll-position";
 
 import logo from "../../img/brickhouse_hori.png";
 import logo_sm from "../../img/brickhouse_2.png";
+import navItems from "./NavItems";
 import NavigationLinks from "./NavigationLinks";
 import "./Navigation.scss";
 
 const Navigation = () => {
     const [scrolling, setScrolling] = useState(false);
-    const [navButtons, setNavButtons] = useState([
-        {
-            id: 1,
-            title: "ABOUT",
-            isActive: false,
-            url: "#about"
-        },
-        {
-            id: 2,
-            title: "PARTNERS",
-            isActive: false,
-            url: "#partners"
-        },
-        {
-            id: 3,
-            title: "ADVISORS",
-            isActive: false,
-            url: "#advisors"
-        },
-        {
-            id: 4,
-            title: "PRESS",
-            isActive: false,
-            url: "#press"
-        },
-        {
-            id: 5,
-            title: "CONTACT",
-            isActive: false,
-            url: "#contact"
-        }
-    ]);
+    const [navButtons, setNavButtons] = useState(navItems);
 
     //Y-coordinate when the sticky bar should appear
     const changePosition = 130;
