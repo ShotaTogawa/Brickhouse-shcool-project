@@ -11,7 +11,7 @@ const Hero = () => {
                 <span className="hero_subheading">IN EARLY STAGE ESPORTS, SPORTS & ENTERTAINMENT TECHNOLOGIES</span>
             </div>
 
-            {/* <div style={{
+            <div style={{
                 width: '100%',
                 height: '100%',
                 overflow: 'hidden',
@@ -24,8 +24,9 @@ const Hero = () => {
                     }}
                     src={BG_Video}
                     autoPlay
+                    muted
                 />
-            </div> */}
+            </div>
 
             {/* <video id="videoBG" autoPlay muted>
                 <source src={BG_Video} type="video/mp4" />
