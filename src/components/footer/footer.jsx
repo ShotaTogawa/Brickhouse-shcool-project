@@ -11,9 +11,9 @@ import './footer.scss';
 const Footer = () => {
   return (
     <section className="footer_container">
-      <img className="logo" src={LOGO} />
+      <img className="logo" src={LOGO} alt="brickhouse_logo" />
 
-      <hr />
+      <div className="line_split"></div>
       <div className="icons">
         <Icons img={IMG1} />
         <Icons img={IMG2} />
