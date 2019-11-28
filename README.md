@@ -94,7 +94,7 @@ A common way to update is by doing
 - [ReactTraining / react-media](https://github.com/ReactTraining/react-media)
 ^ 1.10.0
 
-- [ReactTraining / react-router react-router-dom](ReactTraining / react-router )
+- [ReactTraining / react-router react-router-dom](https://github.com/ReactTraining/react-router)
 ^ 5.1.2
 
 - [facebook / create-react-app react-scripts](https://github.com/facebook/create-react-app)
