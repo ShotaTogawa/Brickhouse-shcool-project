@@ -1,43 +1,13 @@
 import React, { useState } from "react";
 
 import logo from "../../img/brickhouse_logo.png";
+import navItems from "./NavItems";
 import "./Navigation.scss";
 import "./NavigationMobile.scss";
 
 
 const NavigationMobile = () => {
-    const [navButtons, setNavButtons] = useState([
-        {
-            id: 1,
-            title: "ABOUT",
-            isActive: false,
-            url: "#about"
-        },
-        {
-            id: 2,
-            title: "PARTNERS",
-            isActive: false,
-            url: "#partners"
-        },
-        {
-            id: 3,
-            title: "ADVISORS",
-            isActive: false,
-            url: "#advisors"
-        },
-        {
-            id: 4,
-            title: "PRESS",
-            isActive: false,
-            url: "#press"
-        },
-        {
-            id: 5,
-            title: "CONTACT",
-            isActive: false,
-            url: "#contact"
-        }
-    ]);
+    const [navButtons, setNavButtons] = useState(navItems);
 
     const clickHandler = () =>{
         document.body.classList.toggle('open')
@@ -57,7 +27,7 @@ const NavigationMobile = () => {
 
     return (
         <>
-            <button onClick={clickHandler} class="menu-toggle"></button>
+            <button onClick={clickHandler} class="menu_toggle"></button>
             <nav>
                 <ul class="menu">
                     {navButtons.map((item) => (
