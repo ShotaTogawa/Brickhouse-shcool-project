@@ -1,87 +1,85 @@
-.App {
-    font-family: sans-serif;
-  }
-  
   .contact_container {
     display: flex;
     justify-content: space-around;
     background-image:url(../../img/Header.JPG);
-    color: #028dc3;
+    color:white;
     padding:50px;
+    font-family: 'Roboto', sans-serif;
 
+    form {
+      display: flex;
+      flex-direction: column;
+      width:25em;
+      input {
+        border: none;
+        border-bottom: 1px solid white;
+        padding: 8px;
+        margin: 10px 0px;
+        background: transparent;
+        outline:none;
+        &::placeholder{
+           font-size:20px;
+        }
+      }
+      textarea{
+        &::placeholder{
+           font-size:20px;
+        }
+      
+      }
+    
+      textarea{
+        background: transparent;
+        outline:none;
+        border: none;
+        border-bottom: 1px solid white;
+        padding: 8px;
+        margin: 10px 0px;
+      }
+    
+      button {
+        margin-top: 30px;
+        width: 100px;
+        padding: 10px;
+        background-color: #028dc3;
+        border-radius: 7px;
+        border: none;
+        color: white;
+        font-size:15px;
+        font-weight:bold;
+      }
+    }
+    
+      .contact_title {
+        display: flex;
+        font-size:25px;
+        margin-bottom:30px;
+        font-weight:bold;
+        img {
+          padding:5px 0px;
+          margin-right:5px;
+          width: 20px;
+          height: 30px;
+        }
+      }
+  
+      .sub-title{
+        color: #028dc3;
+        font-weight:bold;
+        font-size:17px;
+      }
+    
+
+      .employee_details{
+        margin-bottom:20px;
+        
+        .employee_address {
+          display: flex;
+          margin:0;
+          span{
+            margin:0 5px;
+          }
+        }
+      }
+      
   }
-  
-  .contact_area p{
-    margin:0;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    width:25em;
-  }
-  
-  input {
-    border: none;
-    border-bottom: 1px solid white;
-    padding: 8px;
-    margin: 10px 0px;
-    background: transparent;
-    outline:none;
-    color:white;
-  }
-  
-  textarea{
-    background: transparent;
-    outline:none;
-    color:white;
-    border: none;
-    border-bottom: 1px solid white;
-    padding: 8px;
-    margin: 10px 0px;
-  }
-  
-  .title {
-    display: flex;
-  }
-  
-  .title p {
-    color: #028dc3;
-    margin:0 5px;
-    font-size:25px;
-  }
-  
-  
-  .sub-title{
-    color:white;
-    font-weight:100;
-    font-size:13px;
-  }
-  
-  .title-logo {
-    padding:5px 0px;
-    width: 20px;
-    height: 30px;
-  }
-  
-  .name {
-    color: #028dc3;
-  }
-  
-  .address {
-    display: flex;
-    color: #028dc3;
-    margin:0;
-  }
-  
-  button {
-    margin-top: 30px;
-    width: 100px;
-    padding: 10px;
-    background-color: #028dc3;
-    border-radius: 7px;
-    border: none;
-    color: white;
-  }
-  
-  

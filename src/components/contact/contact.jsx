@@ -13,7 +13,7 @@ const Contact = () => {
         <Title img={Contact_logo} text="SEND US A MESSAGE" />
         <Form />
       </div>
-      <div className="contact_area">
+      <div className="contactDetails_area">
         <Title img={Contact_logo} text="CONTACT US" />
         <h1 className="sub-title">CALL / EMAIL US</h1>
         <ContactDetails
