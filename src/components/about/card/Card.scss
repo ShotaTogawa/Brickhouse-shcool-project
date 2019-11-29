@@ -3,13 +3,35 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    // border: rgb(231, 35, 9) solid 1px;
+    
     .about_cards_card_container {
         flex-basis: 150px;
         flex-grow: 0.5;
         text-align: center;
         margin: 70px;
-        // border: yellowgreen solid 1px;
+        
+        transform: translateY(50px);
+        opacity: 0;
+        transition-duration: 1s;
+        &.animateIn:nth-child(1) {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        &.animateIn:nth-child(2) {
+            transition-delay: 0.3s;
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        &.animateIn:nth-child(3) {
+            transition-delay: 0.6s;
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        &.animateIn:nth-child(4) {
+            transition-delay: 0.9s;
+            transform: translateY(0px);
+            opacity: 1;
+        }
         .about_card_img {
             width: 140px;
         }
