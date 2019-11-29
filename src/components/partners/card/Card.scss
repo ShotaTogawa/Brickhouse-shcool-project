@@ -1,4 +1,4 @@
-$prim-blue: #56CCF2;
+@import "../../../css/variables.scss";
 
 
 .partners_cards_container {
@@ -52,18 +52,18 @@ $prim-blue: #56CCF2;
                 display: flex;
                 align-items: center;
                 .partners_cards_card_name {
-                    color: white;
-                    font-size: 2.2rem;
+                    color: $color_white;
+                    font-size: $font_titleB;
                 }
                 .partners_cards_card_decorationWhite {
                     width: 4px;
                     height: 35px;
-                    background-color: white;
+                    background-color: $color_white;
                     margin: 0px 20px;
                 }
                 .partners_cards_card_city {
-                    color: $prim-blue;
-                    font-size: 1rem;
+                    color: $color_blue;
+                    font-size: $font_paragraph;
                     font-weight: 300;
                     transform: translateY(0.5rem);
                 }
@@ -72,23 +72,24 @@ $prim-blue: #56CCF2;
                 display: flex;
                 align-items: center;
                 .partners_cards_card_number {
-                    color: $prim-blue;
-                    font-size: 1rem;
+                    color: $color_blue;
+                    font-size: $font_paragraph;
                 }
                 .partners_cards_card_decorationBlue {
                     width: 3px;
                     height: 20px;
                     margin: 0px 20px;
-                    background-color: $prim-blue;
+                    background-color: $color_blue;
                 }
                 .partners_cards_card_email {
-                    color: $prim-blue;
-                    font-size: 1rem;
+                    color: $color_blue;
+                    font-size: $font_paragraph;
                 }
             }
             .partners_cards_card_content {
-                color: white;
+                color: $color_white;
                 text-align: left;
+                font-size: $font_paragraph;
                 margin-top: 1.5rem;
                 line-height: 1.8rem;
             }
