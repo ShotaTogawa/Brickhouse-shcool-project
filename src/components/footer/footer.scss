@@ -2,25 +2,32 @@
     background-color: #393c48;
     padding: 40px 0px;
     text-align: center;
+
+  .footer_logo {
+    height: 175px;
+  }
+
+  .line_split{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(222, 222, 222, 0.5) !important;
   }
   
-  .logo {
-    width: 30%;
-  }
-  .icons {
+  .footer_icons {
     display: flex;
     justify-content: center;
     padding-top: 20px;
+    .footer_icon_items {
+      margin: 0px 10px;
+      width: 30px;
+    }
   }
-  
-  .icon_items {
-    margin: 0px 10px;
-    width: 30px;
-  }
-  
-  .copy-right {
+
+  .copy_right {
     color: white;
     font-weight: 100;
     font-size: 10px;
     margin-top:30px;
   }
+}
