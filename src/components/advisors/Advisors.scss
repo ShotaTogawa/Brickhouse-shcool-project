@@ -1,15 +1,16 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+// * {
+//     padding: 0;
+//     margin: 0;
+//     box-sizing: border-box;
+// }
 
-html, body {
-    width: 100%;
-    height: 100%;
-}
+// html, body {
+//     width: 100%;
+//     height: 100%;
+// }
 
 .advisors_container {
+    display: block;
     width: 100%;
     min-height: 70vh;
     text-align: center;
@@ -17,6 +18,8 @@ html, body {
     background: linear-gradient(to right bottom, #17C3FA, #1972F9 60%);
     overflow: hidden;
     position: relative;
+    box-sizing: border-box;
+
     .advisors_title {
         margin-bottom: 50px;
         color: white;
@@ -44,11 +47,11 @@ html, body {
             opacity: 1;
         }
     }
-}
+
 
 .advisors_slider {
     position: relative;
-}
+
 
 .advisors {
     display: flex;
@@ -95,6 +98,8 @@ html, body {
             }
     }
     }
+}
+}
 }
 
 @media(max-width: 960px) {

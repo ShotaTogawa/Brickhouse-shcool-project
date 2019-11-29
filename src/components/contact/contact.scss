@@ -1,76 +1,73 @@
+.contact_container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-image: url(../../img/Header.JPG);
+  color: #028dc3;
+  padding: 50px;
 
-  .contact_container {
-    display: flex;
-    justify-content: space-around;
-    background-image:url(../../img/Header.JPG);
-    color: #028dc3;
-    padding:50px;
-
-  
-  
-  .contact_area p{
-    margin:0;
+  .contact_area p {
+    margin: 0;
   }
-  
+
   form {
     display: flex;
     flex-direction: column;
-    width:25em;
+    // width: 25em;
   }
-  
+
   input {
     border: none;
     border-bottom: 1px solid white;
     padding: 8px;
     margin: 10px 0px;
     background: transparent;
-    outline:none;
-    color:white;
+    outline: none;
+    color: white;
   }
-  
-  textarea{
+
+  textarea {
     background: transparent;
-    outline:none;
-    color:white;
+    outline: none;
+    color: white;
     border: none;
     border-bottom: 1px solid white;
     padding: 8px;
     margin: 10px 0px;
   }
-  
+
   .title {
     display: flex;
   }
-  
+
   .title p {
     color: #028dc3;
-    margin:0 5px;
-    font-size:25px;
+    margin: 0 5px;
+    font-size: 25px;
   }
-  
-  
-  .sub-title{
-    color:white;
-    font-weight:100;
-    font-size:13px;
+
+  .sub-title {
+    color: white;
+    font-weight: 100;
+    font-size: 13px;
   }
-  
+
   .title-logo {
-    padding:5px 0px;
+    padding: 5px 0px;
     width: 20px;
     height: 30px;
   }
-  
+
   .name {
     color: #028dc3;
   }
-  
+
   .address {
     display: flex;
     color: #028dc3;
-    margin:0;
+    margin: 0;
   }
-  
+
   button {
     margin-top: 30px;
     width: 100px;
@@ -80,5 +77,4 @@
     border: none;
     color: white;
   }
-  
 }
