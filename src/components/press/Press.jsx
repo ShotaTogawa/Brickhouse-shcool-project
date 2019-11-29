@@ -2,9 +2,8 @@ import React from "react";
 import "./Press.scss";
 
 const countBodyNum = body => {
-  console.log(body.length);
-  if (body.length >= 140) {
-    return body.slice(0, 140) + "...";
+  if (body.length >= 110) {
+    return body.slice(0, 110) + "...";
   }
   return body;
 };
