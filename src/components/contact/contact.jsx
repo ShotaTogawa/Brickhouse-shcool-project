@@ -9,7 +9,7 @@ import './contact.scss';
 const Contact = () => {
   return (
     <section className="contact_container">
-      <div>
+      <div className="form_area">
         <Title img={Contact_logo} text="SEND US A MESSAGE" />
         <Form />
       </div>
