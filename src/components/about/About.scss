@@ -3,11 +3,19 @@
 .about_container {
     width: 100%;
     min-height: 100vh; 
+    display: flex;
+    position: relative;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
     padding: 50px;
     background: linear-gradient(to right bottom, #17C3FA, #1972F9 60%);
     .about_title {
-        margin-bottom: 50px;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+
         color: white;
         font-size: 2rem;
     }

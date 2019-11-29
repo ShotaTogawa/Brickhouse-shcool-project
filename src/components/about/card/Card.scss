@@ -3,12 +3,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    
     .about_cards_card_container {
         flex-basis: 150px;
         flex-grow: 0.5;
         text-align: center;
         margin: 70px;
-
+        
         transform: translateY(50px);
         opacity: 0;
         transition-duration: 1s;
