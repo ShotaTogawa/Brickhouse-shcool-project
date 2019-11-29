@@ -39,7 +39,7 @@ const About = () => {
 
     return(
         <section className="about_container" id="about">
-            <h1 id="about_title" className="about_title">ABOUT BRICKHOUSE VENTURE</h1>
+            <h1 id="about_title" className="about_title">WHAT WE DO</h1>
             <Card cards={cards}/>
         </section>
     )
