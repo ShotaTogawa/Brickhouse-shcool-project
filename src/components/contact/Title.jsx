@@ -2,8 +2,8 @@ import React from "react";
 
 const Title = ({ img, text }) => {
   return (
-    <div className="title">
-      <img className="title-logo" src={img} />
+    <div className="contact_title">
+      <img src={img} alt="contact_title_logo" />
       <p>{text}</p>
     </div>
   );

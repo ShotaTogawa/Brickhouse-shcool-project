@@ -16,7 +16,7 @@ class PressList extends Component {
           "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLgb68i4i-SdxNtSX6kBDpKVW3XEM2JQiRMKyu-ggRW8qByj-g",
         avatar:
           "https://s3-media2.fl.yelpcdn.com/bphoto/ZmA5A0e_74G1qUZSiqmvHQ/ls.jpg",
-        author: "Steave Kim",
+        author: "Steve Kim",
         company: "CICCC"
       },
       {
@@ -30,7 +30,7 @@ class PressList extends Component {
           "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLgb68i4i-SdxNtSX6kBDpKVW3XEM2JQiRMKyu-ggRW8qByj-g",
         avatar:
           "https://s3-media2.fl.yelpcdn.com/bphoto/ZmA5A0e_74G1qUZSiqmvHQ/ls.jpg",
-        author: "Steave Kim",
+        author: "Steve Kim",
         company: "CICCC"
       },
       {
@@ -44,7 +44,7 @@ class PressList extends Component {
           "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLgb68i4i-SdxNtSX6kBDpKVW3XEM2JQiRMKyu-ggRW8qByj-g",
         avatar:
           "https://s3-media2.fl.yelpcdn.com/bphoto/ZmA5A0e_74G1qUZSiqmvHQ/ls.jpg",
-        author: "Steave Kim",
+        author: "Steve Kim",
         company: "CICCC"
       },
       {
@@ -58,7 +58,7 @@ class PressList extends Component {
           "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLgb68i4i-SdxNtSX6kBDpKVW3XEM2JQiRMKyu-ggRW8qByj-g",
         avatar:
           "https://s3-media2.fl.yelpcdn.com/bphoto/ZmA5A0e_74G1qUZSiqmvHQ/ls.jpg",
-        author: "Steave Kim",
+        author: "Steve Kim",
         company: "CICCC"
       }
     ]
