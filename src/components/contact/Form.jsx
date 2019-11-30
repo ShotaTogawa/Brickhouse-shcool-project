@@ -6,7 +6,7 @@ const Form = () => {
       <input type="email" placeholder="Your mail..." />
       <input type="text" placeholder="Your name..." />
       <textarea type="text" placeholder="Your message..." />
-      <button>submit</button>
+      <button>SUBMIT</button>
     </form>
   );
 };

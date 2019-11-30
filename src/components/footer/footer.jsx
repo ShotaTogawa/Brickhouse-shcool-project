@@ -11,16 +11,15 @@ import './footer.scss';
 const Footer = () => {
   return (
     <section className="footer_container">
-      <img className="logo" src={LOGO} alt="brickhouse_logo" />
-
+      <img className="footer_logo" src={LOGO} alt="brickhouse_logo" />
       <div className="line_split"></div>
-      <div className="icons">
+      <div className="footer_icons">
         <Icons img={IMG1} />
         <Icons img={IMG2} />
         <Icons img={IMG3} />
         <Icons img={IMG4} />
       </div>
-      <p className="copy-right">&copy; Brickhouse Venture.2019. </p>
+      <p className="copy_right">&copy; Brickhouse Venture.2019. </p>
     </section>
   );
 };

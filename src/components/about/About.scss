@@ -1,4 +1,4 @@
-
+@import "../../css/variables.scss";
 
 .about_container {
     width: 100%;
@@ -16,7 +16,7 @@
         left: 50%;
         transform: translateX(-50%);
 
-        color: white;
-        font-size: 2rem;
+        color: $color_white;
+        font-size: $font_titleA;
     }
 }

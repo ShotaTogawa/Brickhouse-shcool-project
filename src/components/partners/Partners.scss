@@ -1,12 +1,14 @@
+@import "../../css/variables.scss";
+
 .partners_container {
     width: 100%;
     min-height: 100vh; 
     text-align: center;
-    padding: 50px 50px 150px 50px;
-    background-color: #22242d;
+    padding: 120px 50px 150px 50px;
+    background-color: $color_dark;
     .partners_title {
         margin-bottom: 50px;
-        color: white;
-        font-size: 2rem;
+        color: $color_white;
+        font-size: $font_titleA;
     }
 }

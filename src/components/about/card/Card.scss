@@ -1,3 +1,5 @@
+@import "../../../css/variables.scss";
+
 .about_cards_container {
     width: 100%;
     display: flex;
@@ -36,11 +38,13 @@
             width: 140px;
         }
         .about_card_title {
-            color: white;
+            color: $color_white;
             margin-top: 10px;
+            font-size: $font_subtitle;
         }
         .about_card_content {
-            color: #f0f0f0;
+            color: $color_semiWhite;
+            font-size: $font_paragraph;
         }
     }
 }
