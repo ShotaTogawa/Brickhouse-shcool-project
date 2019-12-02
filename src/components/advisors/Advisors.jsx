@@ -13,7 +13,7 @@ const Advisors = () => {
         slidesToShow: 4,
         slidesToScroll: 4,
         initialSlide: 0,
-        speed: 300,
+        speed: 800,
         swipe: true,
         responsive: [
         {
@@ -45,7 +45,7 @@ const Advisors = () => {
     };
     return (
         <section class="advisors_container" id="advisors">
-            <h1 className="advisors_title">Advisors</h1>
+            <h1 className="advisors_title">ADVISORS</h1>
             <Slider {...settings}>
                 {advisors.map((advisor, index) => {
                     return (
