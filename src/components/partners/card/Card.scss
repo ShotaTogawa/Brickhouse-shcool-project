@@ -10,6 +10,7 @@
         width: 100%;
         min-height: 500px;
         display: flex;
+        justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
         margin-top: 100px;
@@ -117,6 +118,42 @@
                     height: 100%;
                 }
            }
+        }        
+    }
+}
+
+@media (max-width: 500px) {
+    .partners_cards_container {
+        .partners_cards_card_container{
+            .partners_cards_card_left_container {
+                min-height: 250px;
+            }
+            .partners_cards_card_right_container {
+                .partners_cards_card_firstRow_container {
+                    flex-direction: column;
+                    text-align: center;
+                    .partners_cards_card_decorationWhite {
+                        display: none;
+                    }
+                    .partners_cards_card_city {
+                        margin-top: -10px;
+                    }
+                }
+
+                .partners_cards_card_secondRow_container {
+                    flex-direction: column;
+                    margin-top: 30px;
+                    text-align: center;
+                    .partners_cards_card_decorationBlue {
+                        display: none;
+                    }                    
+                }
+
+                .partners_cards_card_content {
+                    text-align: center;
+                }
+
+            }
         }
     }
 }
