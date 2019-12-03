@@ -1,9 +1,9 @@
 // color
-$font_primary: 'Roboto', sans-serif;
-$color_white: #FFFFFF;
+$font_primary: "Roboto", sans-serif;
+$color_white: #ffffff;
 $color_semiWhite: #f0f0f0;
-$color_blue: #028DC3;
-$color432C: #393C48;
+$color_blue: #028dc3;
+$color432C: #393c48;
 $color_dark: darken($color432C, 10%);
 
 //font-size
@@ -11,3 +11,6 @@ $font_titleA: 3.5rem;
 $font_titleB: 2.2rem;
 $font_subtitle: 1.5rem;
 $font_paragraph: 1rem;
+
+$font_titleA_mobile: 2.0rem;
+$font_titleB_mobile: 1.8rem;
