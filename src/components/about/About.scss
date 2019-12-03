@@ -1,4 +1,5 @@
 @import "../../css/variables.scss";
+@import "../../css/mixins.scss";
 
 .about_container {
     width: 100%;
@@ -8,15 +9,12 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    padding: 50px;
+    padding: 0px 50px 50px 50px;
     background: linear-gradient(to right bottom, #17C3FA, #1972F9 60%);
     .about_title {
-        position: absolute;
-        top: 100px;
-        left: 50%;
-        transform: translateX(-50%);
-
-        color: $color_white;
-        font-size: $font_titleA;
+        @include section_title;
+        @media (max-width: 750px) {
+            @include section_title_mobile;
+        }
     }
 }
