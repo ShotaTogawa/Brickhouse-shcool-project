@@ -1,3 +1,5 @@
+@import "../../css//variables.scss";
+
 .card {
   width: 250px;
   height: 440px;
@@ -54,20 +56,20 @@
     display: flex;
     width: 230px;
     font-weight: bold;
-    font-size: 1.375em;
-    color: #fff;
+    font-size: $font_subtitle;
+    color: $color_white;
     margin-bottom: 15px;
   }
 
   &-body {
     width: 230px;
     display: flex;
-    color: #fff;
+    color: $color_white;
   }
 
   &-list {
     width: 230px;
-    color: #fff;
+    color: $color_white;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -79,7 +81,7 @@
     height: 50px;
     object-fit: cover;
     border-radius: 50%;
-    border: 1px solid #fff;
+    border: 1px solid $color_white;
     margin-right: 7px;
   }
 
@@ -91,17 +93,17 @@
   }
 
   &-author-info {
-    color: #fff;
+    color: $color_white;
     margin-top: 7px;
   }
 
   &-author-info li:first-child {
-    color: #fff;
+    color: $color_white;
     font-size: 90%;
   }
 
   &-author-info li:last-child {
-    color: #fff;
+    color: $color_white;
     font-weight: bold;
   }
 }
