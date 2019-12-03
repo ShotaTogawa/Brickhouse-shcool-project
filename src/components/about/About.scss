@@ -17,4 +17,7 @@
             @include section_title_mobile;
         }
     }
+    @media (max-width: 750px) {
+        padding: 50px;
+    }
 }
