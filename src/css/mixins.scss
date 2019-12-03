@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+@mixin position_center {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+@mixin section_title {
+  padding-top: 100px;
+  margin-bottom: 50px;
+  color: $color_white;
+  font-size: $font_titleA;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin section_title_mobile {
+    padding-top: 0;
+  margin-bottom: 50px;
+  color: $color_white;
+  font-size: $font_titleA_mobile;
+  text-transform: uppercase;
+  text-align: center;
+}
