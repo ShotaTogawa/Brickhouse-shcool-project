@@ -43,7 +43,7 @@ const Contact = ({ isVisible, inView }) => {
 
         <div className="contact_address">
           <h1 className="sub-title">VISIT US</h1>
-          <OfficeDetails officeName="VANCOUVER OFFICE" officeAddress="303 570 GRANVILLESTREET VANCOUVER B.C.,V6C 3P1" />
+          <OfficeDetails officeName="VANCOUVER OFFICE" officeAddress="303 570 Granvillestreet vancouver B.C.,V6C 3P1" />
           <OfficeDetails officeName="TRONTO OFFICE" officeAddress="393 University Avenue Suite 2000, Toronto ON, M5G 1E6" />
           <OfficeDetails officeName="MEXICO OFFICE" officeAddress="Sierra Santa Rosa 47, Colonia Reforma Social, CDMX 11650, Mexico City" />
         </div>
