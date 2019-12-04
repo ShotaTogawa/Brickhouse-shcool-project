@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Form from "./Form.jsx";
 import Title from "./Title.jsx";
 import Contact_logo from "../../img/blue-logo.png";
@@ -6,7 +6,12 @@ import ContactDetails from "./ContactDetails.jsx";
 
 import './contact.scss';
 
-const Contact = () => {
+const Contact = ({ isVisible, inView }) => {
+    
+  useEffect(() => {
+      inView(isVisible && "105");
+  }, [isVisible]);
+
   return (
     <section className="contact_container" id="contact">
       <div className="contact_wrapper">

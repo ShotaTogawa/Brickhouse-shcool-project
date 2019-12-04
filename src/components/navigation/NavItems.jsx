@@ -1,30 +1,30 @@
 const navItems = [
     {
-        id: 1,
+        id: "101",
         title: "ABOUT",
         isActive: false,
         url: "#about"
     },
     {
-        id: 2,
+        id: "102",
         title: "PARTNERS",
         isActive: false,
         url: "#partners"
     },
     {
-        id: 3,
+        id: "103",
         title: "ADVISORS",
         isActive: false,
         url: "#advisors"
     },
     {
-        id: 4,
+        id: "104",
         title: "PRESS",
         isActive: false,
         url: "#press"
     },
     {
-        id: 5,
+        id: "105",
         title: "CONTACT",
         isActive: false,
         url: "#contact"

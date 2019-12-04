@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useWindowScrollPosition from "@rehooks/window-scroll-position";
 
 import logo from "../../img/brickhouse_hori.png";
@@ -7,9 +7,20 @@ import navItems from "./NavItems";
 import NavigationLinks from "./NavigationLinks";
 import "./Navigation.scss";
 
-const Navigation = () => {
+const Navigation = ({cSection}) => {
     const [scrolling, setScrolling] = useState(false);
     const [navButtons, setNavButtons] = useState(navItems);
+    
+    useEffect(() => {
+        const newNavButtons = navButtons.map(button => {
+            button.id === cSection
+                ? (button.isActive = true)
+                : (button.isActive = false);
+            return button;
+        });
+
+        setNavButtons(newNavButtons)
+    }, [cSection]);
 
     //Y-coordinate when the sticky bar should appear
     const changePosition = 130;
@@ -43,13 +54,14 @@ const Navigation = () => {
         );
     }
 
-    const clickHandler = (id) => {
+    const clickHandler = (title) => {
         const newNavButtons = navButtons.map(button => {
-            button.id === id
+            button.title === title
                 ? (button.isActive = true)
                 : (button.isActive = false);
             return button;
         });
+        console.log(newNavButtons);
 
         setNavButtons(newNavButtons)
     }

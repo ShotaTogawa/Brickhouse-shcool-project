@@ -1,10 +1,15 @@
-import React ,{ useState }from "react";
+import React ,{ useState, useEffect }from "react";
 import "./Partners.scss";
 import Card from "../partners/card/Card";
 import Partner_1 from "../../img/Partner_1.png";
 
 
-const Partners = () => {
+const Partners = ({ isVisible, inView }) => {
+    
+    useEffect(() => {
+        isVisible ? inView("102") : inView();
+    }, [isVisible]);
+
     const [cards, setCards] = useState([
         {
             id: 0,

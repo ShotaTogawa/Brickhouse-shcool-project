@@ -1,4 +1,4 @@
-import React ,{ useState }from "react";
+import React, { useState, useEffect } from "react";
 import "./About.scss";
 import Card from "./card/Card";
 import Advicing from "../../img/About_Advicing.svg";
@@ -7,7 +7,12 @@ import BestTeam from "../../img/About_Best_Team.svg";
 import Marketing from "../../img/About_Marketing.svg";
 
 
-const About = () => {
+const About = ({ isVisible, inView }) => {
+
+    useEffect(() => {
+        isVisible ? inView("101") : inView();
+    }, [isVisible]);
+
     const [cards, setCards] = useState(
         [
             {
@@ -37,10 +42,10 @@ const About = () => {
         ]
     )
 
-    return(
+    return (
         <section className="about_container" id="about">
             <h1 id="about_title" className="about_title">WHAT WE DO</h1>
-            <Card cards={cards}/>
+            <Card cards={cards} />
         </section>
     )
 }
