@@ -1,14 +1,15 @@
 @import "../../css/variables.scss";
+@import "../../css/mixins.scss";
 
 .partners_container {
     width: 100%;
-    min-height: 100vh; 
     text-align: center;
-    padding: 120px 50px 150px 50px;
+    padding: 50px 50px 150px 50px;
     background-color: $color_dark;
     .partners_title {
-        margin-bottom: 50px;
-        color: $color_white;
-        font-size: $font_titleA;
+        @include section_title;
+        @media (max-width: 750px) {
+            @include section_title_mobile;
+        }
     }
 }

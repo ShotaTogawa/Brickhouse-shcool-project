@@ -14,7 +14,6 @@ const Card = (props) => {
                             triggerElement= "#about_title"
                             triggerHook= "0.7"
                             classToggle= {['.about_cards_card_container', 'animateIn']}
-                            indicators
                         >
                             <div className="about_cards_card_container">
                                 <img className="about_card_img" src={card.img_url} alt="brickHouseVenture"/>
