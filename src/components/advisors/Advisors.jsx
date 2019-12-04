@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,7 +6,12 @@ import "./Advisors.scss";
 import advisors from "./advisorsInfo";
 import Modal from "./Modal";
 
-const Advisors = () => {
+const Advisors = ({ isVisible, inView }) => {
+    
+    useEffect(() => {
+        isVisible ? inView("103") : inView();
+    }, [isVisible]);
+
     const [modalState, setModalState] = useState(false);
     const [modalText, setModalText] = useState();
 
@@ -58,7 +63,7 @@ const Advisors = () => {
         ]
     };
     return (
-        <section class="advisors_container" id="advisors">
+        <section className="advisors_container" id="advisors">
             <h1 className="advisors_title">ADVISORS</h1>
             <Modal show={modalState} handleClose={hideModal}>
                 <p>{modalText}</p>
@@ -74,7 +79,6 @@ const Advisors = () => {
                             />
                             <p className="advisor_name">{advisor.name}</p>
                             <p className="advisor_location">{advisor.location}</p>
-                            {/* <p className="advisor_description">{advisor.description}</p> */}
                         </div>
                     );
                 })}
