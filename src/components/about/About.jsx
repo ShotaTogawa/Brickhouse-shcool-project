@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./About.scss";
 import Card from "./card/Card";
 import Advicing from "../../img/About_Advicing.svg";
@@ -7,16 +7,7 @@ import BestTeam from "../../img/About_Best_Team.svg";
 import Marketing from "../../img/About_Marketing.svg";
 
 
-const About = ({ onChange, inView }) => {
-
-    function onChange (isVisible) {
-        console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
-    }
-
-    console.log("Can you see me? ",onChange)
-    useEffect(() => {
-        onChange ? inView("101") : inView();
-    }, [onChange]);
+const About = () => {
 
     const [cards, setCards] = useState(
         [

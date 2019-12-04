@@ -1,5 +1,4 @@
 import React from "react";
-// import TrackVisibility from 'react-on-screen';
 import Hero from "./hero/Hero";
 import  VisibilitySensor from 'react-visibility-sensor';
 import PressList from "./press/PressList";
@@ -10,23 +9,29 @@ import Contact from "./contact/contact";
 import Footer from "./footer/footer";
 
 function IndexPage({ checkCurrentSection }) {
+
+    const onChange = (isVisible, id) => {
+        isVisible && checkCurrentSection(id);
+
+    }
+
     return (
         <>
             <Hero />
-            <VisibilitySensor>
-                <About inView={checkCurrentSection} onChange={onChange} />
+            <VisibilitySensor onChange={(e) => onChange(e,"101")} partialVisibility >
+                <About />
             </VisibilitySensor>
-            <VisibilitySensor>
-                <Partners inView={checkCurrentSection} onChange={onChange} />
+            <VisibilitySensor onChange={(e) => onChange(e,"102")} partialVisibility >
+                <Partners />
             </VisibilitySensor>
-            <VisibilitySensor>
-                <Advisors inView={checkCurrentSection} onChange={onChange} />
+            <VisibilitySensor onChange={(e) => onChange(e,"103")} partialVisibility >
+                <Advisors />
             </VisibilitySensor>
-            <VisibilitySensor>
-                <PressList inView={checkCurrentSection} onChange={onChange} />
+            <VisibilitySensor onChange={(e) => onChange(e,"104")} partialVisibility >
+                <PressList />
             </VisibilitySensor>
-            <VisibilitySensor>
-                <Contact inView={checkCurrentSection} onChange={onChange} />
+            <VisibilitySensor onChange={(e) => onChange(e,"105")} partialVisibility >
+                <Contact />
             </VisibilitySensor>
 
             <Footer />
