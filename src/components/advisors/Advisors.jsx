@@ -26,7 +26,7 @@ const Advisors = () => {
             }
         },
         {
-            breakpoint: 768,
+            breakpoint: 960,
             settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
@@ -34,7 +34,7 @@ const Advisors = () => {
             }
         },
         {
-            breakpoint: 425,
+            breakpoint: 560,
             settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
