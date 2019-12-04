@@ -82,6 +82,7 @@
       color: #028dc3;
       font-weight: bold;
       font-size: $font_paragraph;
+      margin-bottom:10px;
     }
 
     .employee_details {
@@ -103,10 +104,18 @@
     .contact_address {
       width: 25%;
       padding-top: 60px;
-
-      p {
-        padding: 10px 0;
+      .officeDetails{
+        margin-bottom:10px;
       }
+      h1{
+        font-size:$font_paragraph;
+      }
+      p{
+        font-size:$font_paragraph;
+      }
+      // p {
+      //   padding: 10px 0;
+      // }
     }
 
 
