@@ -64,6 +64,13 @@ class PressList extends Component {
     ]
   };
 
+  // componentDidMount() {
+  //   this.props.isVisible ? this.props.inView("103") : this.props.inView();
+  //   console.log(this.props.isVisible);
+  // }
+
+  
+
   renderPress() {
     return this.state.presses.map(press => {
       return <Press key={press.id} press={press} />;
@@ -71,7 +78,10 @@ class PressList extends Component {
   }
 
   render() {
+    // const {isVisible, inView} = this.props;
+    // {isVisible ? inView("103") : inView()}
     return (
+      
       <section id="press" className="press_container">
         <h1 className="press_heading">PRESS</h1>
         <div className="press_card_list">{this.renderPress()}</div>

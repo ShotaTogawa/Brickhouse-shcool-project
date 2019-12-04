@@ -10,7 +10,7 @@
 }
 
 @mixin section_title {
-  padding-top: 100px;
+  padding-top: 50px;
   margin-bottom: 50px;
   color: $color_white;
   font-size: $font_titleA;
@@ -19,8 +19,8 @@
 }
 
 @mixin section_title_mobile {
-    padding-top: 0;
-  margin-bottom: 50px;
+  padding-top: 0;
+  // margin-bottom: 50px;
   color: $color_white;
   font-size: $font_titleA_mobile;
   text-transform: uppercase;
