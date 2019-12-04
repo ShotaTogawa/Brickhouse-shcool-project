@@ -7,11 +7,16 @@ import BestTeam from "../../img/About_Best_Team.svg";
 import Marketing from "../../img/About_Marketing.svg";
 
 
-const About = ({ isVisible, inView }) => {
+const About = ({ onChange, inView }) => {
 
+    function onChange (isVisible) {
+        console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
+    }
+
+    console.log("Can you see me? ",onChange)
     useEffect(() => {
-        isVisible ? inView("101") : inView();
-    }, [isVisible]);
+        onChange ? inView("101") : inView();
+    }, [onChange]);
 
     const [cards, setCards] = useState(
         [
