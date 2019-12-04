@@ -20,7 +20,6 @@
         display: flex;
         flex-direction: column;
         
-
         input {
           border: none;
           border-bottom: 1px solid white;
@@ -29,13 +28,14 @@
           background: transparent;
           outline: none;
           &::placeholder {
-            font-size: 14px;
+            font-size: 16px;
             color: rgb(192, 192, 192);
           }
         }
+        
         textarea {
           &::placeholder {
-            font-size: 14px;
+            font-size: 16px;
             color: rgb(192, 192, 192);
           }
         }
@@ -81,11 +81,15 @@
     .sub-title {
       color: #028dc3;
       font-weight: bold;
-      font-size: 17px;
+      font-size: $font_paragraph;
     }
 
     .employee_details {
       margin-bottom: 20px;
+      .employee_name{
+        font-size:$font_paragraph;
+        font-weight:bold;
+      }
 
       .employee_address {
         display: flex;

@@ -29,12 +29,11 @@ const Contact = () => {
             email="SPENCER@BRICKHOUSE.VENTURES"
           />
           <ContactDetails
-            name="Mexico"
+            name="MEXICO OFFICE"
             phoneNumber="+52 55 9627 0205"
             email="MEXICO@BRICKHOUSE.VENTURES"
           />
         </div>
-
 
         <div className="contact_address">
           <h1 className="sub-title">VISIT US</h1>
