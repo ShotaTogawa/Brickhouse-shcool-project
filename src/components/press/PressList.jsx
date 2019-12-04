@@ -73,7 +73,7 @@ class PressList extends Component {
   render() {
     return (
       <section id="press" className="press_container">
-        <div className="press_heading">PRESS</div>
+        <h1 className="press_heading">PRESS</h1>
         <div className="press_card_list">{this.renderPress()}</div>
       </section>
     );

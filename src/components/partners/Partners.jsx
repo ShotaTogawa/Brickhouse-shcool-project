@@ -77,7 +77,7 @@ const Partners = () => {
         
     ])
     return (
-        <section className="partners_container" id="team">
+        <section className="partners_container" id="partners">
             <h1 className="partners_title">PARTNERS</h1>
             <Card cards={cards}/>
         </section>
