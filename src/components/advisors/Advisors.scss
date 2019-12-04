@@ -70,3 +70,15 @@ body {
     }
   }
 }
+
+.slick-dots {
+  position: static;
+  li button:before {
+    font-size: 15px;
+    color: $color_white;
+  }
+  li.slick-active button:before{
+    color: $color_white;
+  }
+}
+
