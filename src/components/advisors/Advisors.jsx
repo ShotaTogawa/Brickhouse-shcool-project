@@ -72,6 +72,11 @@ const Advisors = ({ isVisible, inView }) => {
                 {advisors.map((advisor, index) => {
                     return (
                         <div className="advisor" key={index} onClick={() => showModal(advisor.description)}>
+                            {/* <img
+                                className="advisor_image"
+                                src="https://s3-media2.fl.yelpcdn.com/bphoto/ZmA5A0e_74G1qUZSiqmvHQ/ls.jpg"
+                                alt={advisor.name}
+                            /> */}
                             <p className="advisor_name">{advisor.name}</p>
                             <p className="advisor_location">{advisor.location}</p>
                         </div>
