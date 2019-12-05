@@ -26,13 +26,6 @@ body {
   .advisor {
     padding: 20px;
     position: relative;
-    overflow: scroll;
-    // .advisor_image {
-    //   display: inline-block;
-    //   width: 80%;
-    //   border-radius: 50%;
-    //   margin-bottom: 30px;
-    // }
     .advisor_name {
       color: $color_white;
       font-size: 2.2rem;
@@ -48,19 +41,16 @@ body {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      // top: 0px;
       text-align: left;
       display: none;
       color: $color_white;
     }
-    // .advisor_image,
     .advisor_name,
     .advisor_location,
     .advisor_description {
       transition: all 300ms;
     }
     &:hover {
-      // .advisor_image,
       .advisor_name,
       .advisor_location {
         transform: scale(1.1);
