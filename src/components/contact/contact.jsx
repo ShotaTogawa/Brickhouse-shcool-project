@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Form from "./Form.jsx";
 import Title from "./Title.jsx";
 import OfficeDetails from "./OfficeDetails.jsx"
@@ -7,12 +7,8 @@ import ContactDetails from "./ContactDetails.jsx";
 
 import './contact.scss';
 
-const Contact = ({ isVisible, inView }) => {
+const Contact = () => {
     
-  useEffect(() => {
-      inView(isVisible && "105");
-  }, [isVisible]);
-
   return (
     <section className="contact_container" id="contact">
       <div className="contact_wrapper">
