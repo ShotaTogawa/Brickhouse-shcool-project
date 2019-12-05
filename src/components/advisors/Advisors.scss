@@ -27,20 +27,22 @@ body {
     padding: 20px;
     position: relative;
     overflow: scroll;
-    .advisor_image {
-      display: inline-block;
-      width: 80%;
-      border-radius: 50%;
-      margin-bottom: 30px;
-    }
+    // .advisor_image {
+    //   display: inline-block;
+    //   width: 80%;
+    //   border-radius: 50%;
+    //   margin-bottom: 30px;
+    // }
     .advisor_name {
       color: $color_white;
+      font-size: 2.2rem;
       border-bottom: 1px solid #393c48;
       padding-bottom: 10px;
       margin-bottom: 10px;
     }
     .advisor_location {
       color: #163075;
+      font-size: 1.5rem;
     }
     .advisor_description {
       position: absolute;
@@ -51,14 +53,14 @@ body {
       display: none;
       color: $color_white;
     }
-    .advisor_image,
+    // .advisor_image,
     .advisor_name,
     .advisor_location,
     .advisor_description {
       transition: all 300ms;
     }
     &:hover {
-      .advisor_image,
+      // .advisor_image,
       .advisor_name,
       .advisor_location {
         transform: scale(1.1);
@@ -69,6 +71,11 @@ body {
       }
     }
   }
+}
+
+.slick-track {
+  display: flex;
+  align-items: baseline;
 }
 
 .slick-dots {
