@@ -33,7 +33,7 @@
                 margin-right: 0%;
             }
             .partners_cards_card_picture {
-                background-image: url(../../../img/Partner_1.png);
+                // background-image: url(../../../img/Partner_1.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: contain;
@@ -48,7 +48,6 @@
             min-height: 500px;
             display: flex;
             flex-flow: column;
-            // border: rgb(255, 115, 0) solid 1px;
             .partners_cards_card_firstRow_container {
                 display: flex;
                 align-items: center;

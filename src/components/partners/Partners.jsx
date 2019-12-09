@@ -2,6 +2,8 @@ import React ,{ useState }from "react";
 import "./Partners.scss";
 import Card from "../partners/card/Card";
 import Partner_1 from "../../img/Partner_1.png";
+import SPENCER_SMYL from "../../img/SPENCER_SMYL.png";
+import EVAN_KUBES from "../../img/EVAN_KUBES.png";
 
 
 const Partners = () => {
@@ -30,7 +32,7 @@ const Partners = () => {
         },
         {
             id: 1,
-            img_url: Partner_1,
+            img_url: SPENCER_SMYL,
             name: "SPENCER SMYL",
             city: "VANCOUVER",
             number: "604 785 4229",
@@ -52,7 +54,7 @@ const Partners = () => {
         },
         {
             id: 2,
-            img_url: Partner_1,
+            img_url: EVAN_KUBES,
             name: "EVAN KUBES",
             city: "TORONTO",
             number: "647 919 1913",
