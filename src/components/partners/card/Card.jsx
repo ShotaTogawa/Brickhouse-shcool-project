@@ -9,7 +9,7 @@ const Card = (props) => {
                 return(
                 <div key={card.id} className={card.id % 2 === 1 ? "partners_cards_card_container even" : "partners_cards_card_container"}>
                     <div className={card.id % 2 === 1 ? "partners_cards_card_left_container even" : "partners_cards_card_left_container"}>
-                        <div className="partners_cards_card_picture"></div>
+                        <div className="partners_cards_card_picture" style={{backgroundImage: `url(${card.img_url})`}}></div>
                     </div>
                     <div className="partners_cards_card_right_container">
                         <div className="partners_cards_card_firstRow_container">
