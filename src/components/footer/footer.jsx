@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="line_split"></div>
       <div className="footer_bottom">
         <p className="copy_right">&copy; Brickhouse Venture.2019. </p>
-        <Icons img={IMG1} link="#"/>
+        <Icons img={IMG1} link="https://www.linkedin.com/company/brickhouse-ventures-corp/about/"/>
       </div>
     </section>
   );
