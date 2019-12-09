@@ -3,7 +3,7 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "favicon.png",
+      "src": "brickhouse.ico",
       "sizes": "32x32",
       "type": "image/x-icon"
     },
