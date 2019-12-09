@@ -28,6 +28,7 @@
           background: transparent;
           outline: none;
           color: $color_white;
+          font-size:15px;
           &::placeholder {
             font-size: 16px;
             color: rgb(192, 192, 192);
@@ -35,6 +36,7 @@
         }
         
         textarea {
+          font-size:15px;
           &::placeholder {
             font-size: 16px;
             color: rgb(192, 192, 192);
@@ -62,6 +64,12 @@
           color: white;
           font-size: 15px;
           font-weight: bold;
+          &:focus{
+            outline:none;
+          }
+          &:hover{
+            transform:scale(1.03)
+          }
         }
       }
     }
@@ -114,9 +122,6 @@
       p{
         font-size:$font_paragraph;
       }
-      // p {
-      //   padding: 10px 0;
-      // }
     }
 
 
