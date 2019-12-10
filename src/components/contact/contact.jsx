@@ -1,17 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Form from "./Form.jsx";
 import Title from "./Title.jsx";
+import OfficeDetails from "./OfficeDetails.jsx"
 import Contact_logo from "../../img/blue-logo.png";
 import ContactDetails from "./ContactDetails.jsx";
 
 import './contact.scss';
 
-const Contact = ({ isVisible, inView }) => {
+const Contact = () => {
     
-  useEffect(() => {
-      inView(isVisible && "105");
-  }, [isVisible]);
-
   return (
     <section className="contact_container" id="contact">
       <div className="contact_wrapper">
@@ -34,18 +31,17 @@ const Contact = ({ isVisible, inView }) => {
             email="SPENCER@BRICKHOUSE.VENTURES"
           />
           <ContactDetails
-            name="Mexico"
+            name="MEXICO OFFICE"
             phoneNumber="+52 55 9627 0205"
             email="MEXICO@BRICKHOUSE.VENTURES"
           />
         </div>
 
-
         <div className="contact_address">
           <h1 className="sub-title">VISIT US</h1>
-          <p>303 570 GRANVILLESTREET VANCOUVER B.C.,V6C 3P1</p>
-          <p>393 University Avenue Suite 2000, Toronto ON, M5G 1E6</p>
-          <p>Sierra Santa Rosa 47, Colonia Reforma Social, CDMX 11650, Mexico City</p>
+          <OfficeDetails officeName="VANCOUVER OFFICE" officeAddress="303 570 Granvillestreet vancouver B.C.,V6C 3P1" />
+          <OfficeDetails officeName="TRONTO OFFICE" officeAddress="393 University Avenue Suite 2000, Toronto ON, M5G 1E6" />
+          <OfficeDetails officeName="MEXICO OFFICE" officeAddress="Sierra Santa Rosa 47, Colonia Reforma Social, CDMX 11650, Mexico City" />
         </div>
       </div>
 

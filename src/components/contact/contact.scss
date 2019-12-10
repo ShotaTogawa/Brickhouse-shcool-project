@@ -20,7 +20,6 @@
         display: flex;
         flex-direction: column;
         
-
         input {
           border: none;
           border-bottom: 1px solid white;
@@ -28,14 +27,16 @@
           margin: 10px 0px;
           background: transparent;
           outline: none;
+          color: $color_white;
           &::placeholder {
-            font-size: 14px;
+            font-size: 16px;
             color: rgb(192, 192, 192);
           }
         }
+        
         textarea {
           &::placeholder {
-            font-size: 14px;
+            font-size: 16px;
             color: rgb(192, 192, 192);
           }
         }
@@ -81,11 +82,16 @@
     .sub-title {
       color: #028dc3;
       font-weight: bold;
-      font-size: 17px;
+      font-size: $font_paragraph;
+      margin-bottom:10px;
     }
 
     .employee_details {
       margin-bottom: 20px;
+      .employee_name{
+        font-size:$font_paragraph;
+        font-weight:bold;
+      }
 
       .employee_address {
         display: flex;
@@ -99,10 +105,18 @@
     .contact_address {
       width: 25%;
       padding-top: 60px;
-
-      p {
-        padding: 10px 0;
+      .officeDetails{
+        margin-bottom:10px;
       }
+      h1{
+        font-size:$font_paragraph;
+      }
+      p{
+        font-size:$font_paragraph;
+      }
+      // p {
+      //   padding: 10px 0;
+      // }
     }
 
 
@@ -131,4 +145,15 @@
       }
     }
   }
+
+  @media(max-width:1000px){
+    .contact_container{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    .form_area{
+      margin-bottom:100px;
+    }
+  }
+}
 }

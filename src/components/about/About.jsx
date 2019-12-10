@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./About.scss";
 import Card from "./card/Card";
 import Advicing from "../../img/About_Advicing.svg";
@@ -7,11 +7,7 @@ import BestTeam from "../../img/About_Best_Team.svg";
 import Marketing from "../../img/About_Marketing.svg";
 
 
-const About = ({ isVisible, inView }) => {
-
-    useEffect(() => {
-        isVisible ? inView("101") : inView();
-    }, [isVisible]);
+const About = () => {
 
     const [cards, setCards] = useState(
         [
